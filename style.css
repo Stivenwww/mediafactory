@@ -1,0 +1,33 @@
+:root {
+--bg: #f6f7f9; --surface: #ffffff; --fg: #15171c; --muted: #5a606d;
+--line: #dfe2e8; --accent: #e8264d; --accent2: #0b7f81;
+--display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+--body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+--bg: #111318; --surface: #191c23; --fg: #eceef2; --muted: #a2a8b5;
+--line: #2a2f3a; --accent: #ff4d6d; --accent2: #25d4d6; color-scheme: dark } }
+:root[data-theme="dark"] {
+--bg: #111318; --surface: #191c23; --fg: #eceef2; --muted: #a2a8b5;
+--line: #2a2f3a; --accent: #ff4d6d; --accent2: #25d4d6; color-scheme: dark }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 var(--body); }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 16px 4rem; }
+header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.5rem; }
+.mark { width: 2.6rem; height: 2.6rem; border: 3px solid var(--accent); display: grid; place-items: center;
+font: 700 1rem var(--display); flex: none; }
+h1 { font: 700 1.9rem/1.2 var(--display); margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0.2rem 0 0; font-size: 0.95rem; }
+nav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+nav a { color: var(--fg); text-decoration: none; border: 1px solid var(--line); padding: 0.35rem 0.8rem;
+border-radius: 999px; font-weight: 500; font-size: 0.9rem; background: var(--surface); }
+nav a:hover, nav a:focus-visible { border-color: var(--accent); outline: none; }
+section { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem 1.4rem; margin-bottom: 1.5rem; scroll-margin-top: 1rem; }
+h2 { font: 700 1.35rem var(--display); margin: 0 0 0.25rem; }
+.date { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
+h3 { font: 600 1rem var(--body); margin: 1.2rem 0 0.3rem; color: var(--accent2); }
+p, li { max-width: 65ch; }
+ul { padding-left: 1.2rem; }
+a { color: var(--accent2); }
+code { font-size: 0.9em; background: var(--bg); padding: 0.05rem 0.3rem; border-radius: 4px; }
+footer { color: var(--muted); font-size: 0.85rem; }
